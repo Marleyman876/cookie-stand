@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap'); 
+
+* {
+  border: 5px;
+  border-style: solid red;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+}
 body{
   background-color: lightskyblue;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+   font-size: 5em;
+   letter-spacing: -2px;
+   border-bottom: 2px solid black;
+   text-transform: uppercase;
+   text-align: center
+}
+a{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  font-weight: 50;
+
 }
