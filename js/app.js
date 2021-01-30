@@ -1,14 +1,14 @@
 'use strict';
 
 let myContainer = document.getElementById('container');
-let seattleList = document.getElementById('seattle');
+//let seattleList = document.getElementById('seattle');
 
 console.log(myContainer);
 
 //global variables 
 
 const hoursArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
+ 
 let seattle = {
   name: 'Seattle',
   minCustomerPerHr: 23,
@@ -42,7 +42,6 @@ let seattle = {
     let li = document.createElement('li'); 
     li.textContent = `Total Cookies Sold: ${this.dailySoldTotal}`;
     seattleList.appendChild(li);
-    seattleList.classList += 'testing';
   },
 };
 
@@ -213,8 +212,8 @@ lima.render();
 console.log(lima); 
 
 
-/*********************************************************Sudo-Code*************************************************************
+/*******************************************************Sudo-Code*************************************************************
 
-let cookies= [ '16','20','35','48','56','77','93','144','119','84','61','23','42','57']
+let seattle = function(name,minCustomerPerHr,maCustomerPerHr,avgCookieSold, cookieSoldPerHr )
 
 */
