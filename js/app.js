@@ -1,9 +1,10 @@
 'use strict';
 let tableBody = document.getElementById('store-sales');
 
-//global variables 
+//global Arrays  
 
 const hoursArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+const grandTotal = new Array(hoursArray.length + 1).fill(0);
 
 //constructor 
 
@@ -14,6 +15,8 @@ let CookieShop = function (locationName, minCustomerPerHr, maxCustomerPerHr, avg
   this.avgCookiesSold = avgCookiesSold;
   this.cookiesSoldHourlyArray = [];
   this.dailySoldTotal = 0;
+  this.calCookiesPerHour();
+  this.calGrandTotal();
   this.render();
 }
 //for random customer 
@@ -46,13 +49,13 @@ let renderHeader = function () {
     row.appendChild(th);
   }
   th = document.createElement('th');
-  th.textContent = "total"
+  th.textContent = "Total"
   row.appendChild(th);
 
 }
 
 CookieShop.prototype.render = function () {
-  this.calCookiesPerHour();
+  console.log(grandTotal);
   let tr = document.createElement('tr');
   tableBody.appendChild(tr);
 
@@ -71,19 +74,31 @@ CookieShop.prototype.render = function () {
 };
 
 //calculate grand total
+CookieShop.prototype.calGrandTotal = function () {
+  for (let i = 0; i < this.cookiesSoldHourlyArray.length; i++) {
+    grandTotal[i] += this.cookiesSoldHourlyArray[i];
+    grandTotal[grandTotal.length - 1] += this.cookiesSoldHourlyArray[i];
+  }
+}
 
-
+let renderFoot = function(){
+  let tr = document.getElementById('store-totals');
+  let th = document.createElement('th')
+  th.textContent = 'Grand Total';
+  tr.appendChild(th)
+  for (let i = 0; i < grandTotal.length; i++){
+    let td = document.createElement('td');
+    td.textContent = grandTotal[i];
+    tr.appendChild(td);
+  }
+}
 renderHeader();
+
 new CookieShop('Seattle', 23, 65, 6.3);
+
 new CookieShop('Tokyo', 3, 24, 1.2);
 new CookieShop('Dubai', 11, 38, 2.3);
 new CookieShop('Paris', 20, 38, 2.3);
 new CookieShop('Lima', 2, 16, 4.6);
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
-
-
+renderFoot();
