@@ -23,6 +23,8 @@ h1 {
 
 table{
   border: 2px solid black;
+  margin:auto;
+  margin-top: 5%;
 }
 table td, table th{
   margin: 10px;
