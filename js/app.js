@@ -13,7 +13,7 @@ let CookieShop = function (locationName, minCustomerPerHr, maxCustomerPerHr, avg
   this.minCustomerPerHr = minCustomerPerHr;
   this.maxCustomerPerHr = maxCustomerPerHr;
   this.avgCookiesSold = avgCookiesSold;
-  this.cookiesSoldHourlyArray = [];
+  this.cookiesSoldHourlyArray = []; 
   this.dailySoldTotal = 0;
   this.calCookiesPerHour();
   this.calGrandTotal();
