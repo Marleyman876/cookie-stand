@@ -101,4 +101,5 @@ new CookieShop('Dubai', 11, 38, 2.3);
 new CookieShop('Paris', 20, 38, 2.3);
 new CookieShop('Lima', 2, 16, 4.6);
 
+
 renderFoot();

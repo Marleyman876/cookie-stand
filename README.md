@@ -1,38 +1,23 @@
-# cookie-stand
+# LAB #: 7
+
+## Project Name Salmon Cookie
+
+I built an app with a direct and powerful purpose. My app does all of the things that it accomplishes well. Here  I describe the purpose and functionality so those that visit my README understand the app.
+
+### Author: Garfield Grant
+
+### Links and Resources
+
+* [Math code](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random).
+* [Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
+### Reflections and Comments
+
+Initially this was a very strenuous assignment, however I found a way to continue to improve upon my code. Below is my initial code full of object literals which was my first approach. the second approach was using a constructor with three functions.
 
 <!-- dead code 
-
+object literals used for initial code. 
 /* 
-
-  randomCustomerEachHr: function () {
-    return Math.floor(Math.random() * (this.maxCustomerPerHr - this.minCustomerPerHr + 1) + this.minCustomerPerHr);
-  },
-
-  calCookiesSoldPerHr: function () {
-    for (let i = 0; i < hoursArray.length; i++) {
-      let hourlyCookies = Math.ceil(this.randomCustomerEachHr() * this.avgCookiesSold);
-      this.cookiesSoldPerHr.push(hourlyCookies)
-      this.dailySoldTotal += hourlyCookies;
-    }
-  },
-  
-  render:function() {
-    this.calCookiesSoldPerHr();
-   // console.log('I am here');
-    let seattleList = document.getElementById('seattle-stand');
-    for (let i = 0; i < hoursArray.length; i++){
-      let li = document.createElement('li'); 
-      li.textContent = `${hoursArray[i]}: ${this.cookiesSoldPerHr[i]}`;
-      seattleList.appendChild(li);
-    }
-    let li = document.createElement('li'); 
-    li.textContent = `Total Cookies Sold: ${this.dailySoldTotal}`;
-    seattleList.appendChild(li);
-  },
-
-seattle.render();
-console.log(seattle); 
-
 //Tokyo
 
 let tokyo = {
