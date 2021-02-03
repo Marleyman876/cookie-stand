@@ -1,19 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap'); 
-
-* {
-  border: 5px;
-  border-style: solid red;
-  border-radius: 10px;
-  padding: 0px;
-  margin: 0;
-  font-family: 'PT Sans Caption', sans-serif;
-}
 body{
   background-color: lightskyblue;
 }
 
 h1 {
-  font-family: 'Merriweather', serif;
+  font-family: 'DM Serif Display', serif;
    font-size: 5em;
    letter-spacing: -2px;
    border-bottom: 2px solid black;
