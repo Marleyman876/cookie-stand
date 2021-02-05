@@ -1,5 +1,6 @@
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 header{
@@ -32,7 +33,7 @@ header span :nth-child(2){
 
 nav a{
   text-decoration: none;
-  color: #aaa;
+  color: rgb(130, 54, 54);
 }
 
 main{
@@ -61,8 +62,13 @@ main article{
 main h2 {
   margin-left: 30px;
   font-size: 20px;
+  line-height: 1.6;
+  }
+li{
+  line-height: 1.6;
+  font-size: 20px;
 }
-
+  
 main p {
   height: 300px;
   overflow: auto;
@@ -70,6 +76,7 @@ main p {
   margin-left: 29px;
   line-height: 45px;
   font-size: 12px;
+  color: purple;
 }
 
 h1{
@@ -81,16 +88,22 @@ h1{
    text-align: center
 }
 
-table{
+table, tbody{
   border: 2px solid black;
   margin:auto;
   margin-top: 5%;
+  background-color: rgb(188, 223, 211);
 }
+
 table td, table th{
   margin: 10px;
   padding:10px;
+  font-weight: bold;
   margin-top: 5px;
   border: 1px solid black;
   text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: rgb(136, 62, 62);
+  
 
 }
