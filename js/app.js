@@ -1,5 +1,9 @@
-'use strict';
+'use strict'
+//global variables
 let tableBody = document.getElementById('store-sales');
+let myForm = document.querySelector('form');
+
+
 
 //global Arrays  
 
@@ -92,14 +96,33 @@ let renderFoot = function(){
     tr.appendChild(td);
   }
 }
-renderHeader();
 
-new CookieShop('Seattle', 23, 65, 6.3);
+function handleSubmit(event){
+    event.preventDefault();
+    let newLocation = event.target.storelocation.value;
+    let minCustomer = +event.target.minicustomer.value;
+    let maxCustomer = +event.target.maxicustomer.value;
+    let avgFood = +event.target.averagecookies.value;
+    let newStand = new CookieShop(newLocation, minCustomer, maxCustomer, avgFood);
+    let grab = document.getElementById('store-totals');
+    grab.innerHTML=''
+    renderFoot();
+       
+  }
+  
+  
+ 
+  
+  new CookieShop('Seattle', 23, 65, 6.3);
+  new CookieShop('Tokyo', 3, 24, 1.2);
+  new CookieShop('Dubai', 11, 38, 2.3);
+  new CookieShop('Paris', 20, 38, 2.3);
+  new CookieShop('Lima', 2, 16, 4.6);
+  
+  renderHeader();
+  myForm.addEventListener('submit', handleSubmit);  
+  
+  renderFoot();
+  
 
-new CookieShop('Tokyo', 3, 24, 1.2);
-new CookieShop('Dubai', 11, 38, 2.3);
-new CookieShop('Paris', 20, 38, 2.3);
-new CookieShop('Lima', 2, 16, 4.6);
 
-
-renderFoot();
