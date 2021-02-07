@@ -110,9 +110,7 @@ function handleSubmit(event){
        
   }
   
-  
- 
-  
+    
   new CookieShop('Seattle', 23, 65, 6.3);
   new CookieShop('Tokyo', 3, 24, 1.2);
   new CookieShop('Dubai', 11, 38, 2.3);
