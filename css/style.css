@@ -107,3 +107,22 @@ table td, table th{
   
 
 }
+form{
+text-align: center;
+border: black solid 1px;
+height: 150px;
+font-weight: bold;
+
+}
+
+fieldset label{
+  margin-top: 12px;
+  padding: 5px;
+  display: inline-block;
+  
+
+}
+fieldset{
+  height: 100%;
+}
+
