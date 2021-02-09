@@ -100,19 +100,22 @@ let renderFoot = function(){
 function handleSubmit(event){
     event.preventDefault();
     let newLocation = event.target.storelocation.value;
-    let minCustomer = +event.target.minicustomer.value;
-    let maxCustomer = +event.target.maxicustomer.value;
-    let avgFood = +event.target.averagecookies.value;
-    let newStand = new CookieShop(newLocation, minCustomer, maxCustomer, avgFood);
-    let grab = document.getElementById('store-totals');
-    grab.innerHTML=''
-    renderFoot();
+    if (newLocation.trim() === ''){
+      alert('Please add a location')
+    } else{
+      let minCustomer = +event.target.minicustomer.value;
+      let maxCustomer = +event.target.maxicustomer.value;
+      let avgFood = +event.target.averagecookies.value;
+      let newStand = new CookieShop(newLocation, minCustomer, maxCustomer, avgFood);
+      let grab = document.getElementById('store-totals');
+      grab.innerHTML=''
+      renderFoot();
+
+    }
        
   }
   
-  
- 
-  
+    
   new CookieShop('Seattle', 23, 65, 6.3);
   new CookieShop('Tokyo', 3, 24, 1.2);
   new CookieShop('Dubai', 11, 38, 2.3);
