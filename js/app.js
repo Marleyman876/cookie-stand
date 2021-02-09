@@ -100,9 +100,6 @@ let renderFoot = function(){
 function handleSubmit(event){
     event.preventDefault();
     let newLocation = event.target.storelocation.value;
-    if (newLocation.trim() === ''){
-      alert('Please add a location')
-    } else{
       let minCustomer = +event.target.minicustomer.value;
       let maxCustomer = +event.target.maxicustomer.value;
       let avgFood = +event.target.averagecookies.value;
@@ -111,8 +108,7 @@ function handleSubmit(event){
       grab.innerHTML=''
       renderFoot();
 
-    }
-       
+           
   }
   
     
